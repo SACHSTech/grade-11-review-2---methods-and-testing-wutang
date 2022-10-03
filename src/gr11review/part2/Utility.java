@@ -45,4 +45,19 @@ public class Utility {
     }
     return strlongest;    
 }
+public static int[] withoutTen(int[] nums){
+
+    int[] newarr = new int[nums.length];
+    int x = 0;
+
+    for (int i = 0; i < nums.length; i++){
+        if (nums[i] != 10){
+            newarr[i - x] = nums[i];
+        }else{
+            x++;
+        }
+    }
+    return newarr;
+}
+
 }

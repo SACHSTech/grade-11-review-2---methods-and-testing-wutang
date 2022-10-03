@@ -92,14 +92,15 @@ public static boolean canBalance(int[] nums){
     }else{
       return false;
     }
-    
+}
+
 public static int[][] reverse(int[][] arr){
 
     int[][] newarr = new int[arr.length][arr[arr.length - 1].length];
           int y = 0;
           int w = 0;
           
-          for (int in = arr.length - 1; in >= 0; in--){
+          for (int i = arr.length - 1; i >= 0; i--){
             for (int x = arr[arr.length - 1].length - 1; x >= 0; x--){
                 newarr[y][w] = arr[i][x];
                 w++;
@@ -111,6 +112,5 @@ public static int[][] reverse(int[][] arr){
           return newarr;
 }
 
-}
 
 }

@@ -120,5 +120,29 @@ public static boolean canBalance(int[] nums){
 }
 
 
+/**
+ * method to reverse a 2d array 
+ * @param arr inputs a 2d array off numbers
+ * @return 2d arrray of the original array reversed 
+ */
+public static int[][] reverse(int[][] arr){
+
+    int[][] newarr = new int[arr.length][arr[arr.length - 1].length];
+          int y = 0;
+          int w = 0;
+          
+          for (int i = arr.length - 1; i >= 0; i--){
+            for (int x = arr[arr.length - 1].length - 1; x >= 0; x--){
+                newarr[y][w] = arr[i][x];
+                w++;
+            }
+            w = 0;
+            y++;
+          }
+
+          return newarr;
+}
+
+
 
 }

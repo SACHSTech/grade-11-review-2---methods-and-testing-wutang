@@ -58,5 +58,27 @@ public class Utility {
 }
 
 
+/**
+ * method that enters an array and returns one which contains no 10s, and instead 0s at the end
+ * @param nums enters an array of numbers to be operated on 
+ * @return the same except without the 10s found inside 
+ */
+public static int[] withoutTen(int[] nums){
+
+    int[] newarr = new int[nums.length];
+    int x = 0;
+
+    for (int i = 0; i < nums.length; i++){
+        if (nums[i] != 10){
+            newarr[i - x] = nums[i];
+        }else{
+            x++;
+        }
+    }
+    return newarr;
+}
+
+
+
 
 }

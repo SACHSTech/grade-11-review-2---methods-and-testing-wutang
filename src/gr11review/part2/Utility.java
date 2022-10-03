@@ -7,8 +7,55 @@ import java.io.IOException;
 public class Utility {
 
     public static void main(String[] args) throws FileNotFoundException {
+        
+            
+        String filePath = new File("").getAbsolutePath();
+        final String absPath = filePath+ "/src/gr11review/test2/";
+
+        System.out.println(longestWord(absPath+"Review2_3Test_1.txt"));
+
+
+        /*
+         * System.out.println(xyBalance("dfdsfsfxyxx"));
+         */
+
+
+        /*
+         * int[] arr = {10,5,15};
+        System.out.println(canBalance(arr));
+         */
+
+         /*
+          * int[] arr = {10,5,15};
+        int[] ar = withoutTen(arr);
+        for (int i = 0; i < arr.length; i++){
+        System.out.print((ar[i]));
+        }
+          */
+
+
+
+        /*
+         * int[][] arr = {{1,2,3}, {4,5,6}, {7,8,9}};
+
+          int[][] ar = reverse(arr);
+
+          for (int i = 0; i < ar.length; i++){
+            for (int x = 0; x < ar[i].length; x++){
+                System.out.print(ar[i][x]);
+            }
+            System.out.println("");
+          }
+         */
+
+
     }
 
+    /**
+     * method to check if a string contains characters ys that balance character xs
+     * @param str inputs a string that contains letters 
+     * @return boolean vlaue on if the string xs are balanced 
+     */
     public static boolean xyBalance(String str){
         int Lengthstyll = str.length();
         boolean YTrue = false;
@@ -31,6 +78,13 @@ public class Utility {
             return false;
         }
     }
+
+    /**
+     * method to return the longest word in a txt file
+     * @param filenametxt enters files from the same directory
+     * @return longest string in the file 
+     * @throws FileNotFoundException
+     */
     public static String longestWord(String filenametxt) throws FileNotFoundException{
         String strlongest = "";
         String strCurrent;
@@ -45,6 +99,12 @@ public class Utility {
     }
     return strlongest;    
 }
+
+/**
+ * method that enters an array and returns one which contains no 10s, and instead 0s at the end
+ * @param nums enters an array of numbers to be operated on 
+ * @return the same except without the 10s found inside 
+ */
 public static int[] withoutTen(int[] nums){
 
     int[] newarr = new int[nums.length];
@@ -59,6 +119,12 @@ public static int[] withoutTen(int[] nums){
     }
     return newarr;
 }
+
+/**
+ * method to determine wether there is a point where the array can equally be split to weigh the same on both sides 
+ * @param nums array input of numbers
+ * @return boolean on wether there is a point where the array can equally be split to weigh the same on both sides 
+ */
 public static boolean canBalance(int[] nums){
     int sum = 0;
     int half = 0;
@@ -94,6 +160,11 @@ public static boolean canBalance(int[] nums){
     }
 }
 
+/**
+ * method to reverse a 2d array 
+ * @param arr inputs a 2d array off numbers
+ * @return 2d arrray of the original array reversed 
+ */
 public static int[][] reverse(int[][] arr){
 
     int[][] newarr = new int[arr.length][arr[arr.length - 1].length];

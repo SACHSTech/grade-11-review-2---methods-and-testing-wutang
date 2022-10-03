@@ -99,7 +99,7 @@ public static int[][] reverse(int[][] arr){
           int y = 0;
           int w = 0;
           
-          for (int i = arr.length - 1; i >= 0; i--){
+          for (int in = arr.length - 1; in >= 0; in--){
             for (int x = arr[arr.length - 1].length - 1; x >= 0; x--){
                 newarr[y][w] = arr[i][x];
                 w++;

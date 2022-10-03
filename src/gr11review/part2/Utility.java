@@ -35,5 +35,28 @@ public class Utility {
         }
     }
 
+    
+    /**
+     * method to return the longest word in a txt file
+     * @param filenametxt enters files from the same directory
+     * @return longest string in the file 
+     * @throws FileNotFoundException
+     */
+    public static String longestWord(String filenametxt) throws FileNotFoundException{
+        String strlongest = "";
+        String strCurrent;
+
+        Scanner sc = new Scanner(new File(filenametxt));
+
+        while (sc.hasNext()) {
+            strCurrent = sc.next();
+             if (strCurrent.length() > strlongest.length()) {
+                strlongest = strCurrent;
+             }
+    }
+    return strlongest;    
+}
+
+
 
 }

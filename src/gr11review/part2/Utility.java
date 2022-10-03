@@ -79,6 +79,46 @@ public static int[] withoutTen(int[] nums){
 }
 
 
+/**
+ * method to determine wether there is a point where the array can equally be split to weigh the same on both sides 
+ * @param nums array input of numbers
+ * @return boolean on wether there is a point where the array can equally be split to weigh the same on both sides 
+ */
+public static boolean canBalance(int[] nums){
+    int sum = 0;
+    int half = 0;
+    int splitsum = 0;
+    int i=0;
+
+
+    if (nums.length == 0){
+        return false;
+    }
+
+    for (int x = 0; x < nums.length; x++){
+        sum = sum + nums[x];
+    }
+
+    if (sum%2 ==0){
+      half = sum / 2;
+        while(splitsum != half){
+            splitsum = splitsum + nums[i];
+            i++;
+          if (i == nums.length){
+            break;
+          }
+        }
+    }else{
+        return false;
+    }
+
+    if (splitsum == half){
+      return true;
+    }else{
+      return false;
+    }
+}
+
 
 
 }

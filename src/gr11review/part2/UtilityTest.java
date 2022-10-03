@@ -162,7 +162,7 @@ public class UtilityTest{
      * Test for longestword method
      */
     void longestwordTes2() throws IOException{
-        assertEquals("conservation", Utility.longestWord("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_2.txt"));
+        assertEquals("x", Utility.longestWord("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_2.txt"));
     }
     @Test
     /**

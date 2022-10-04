@@ -15,7 +15,7 @@ public class UtilityTest{
     int[] zeroFrontInput3 = {1,0};
     int[] zeroFrontInput4 = {0,1,1,0,1};
     int[] zeroFrontAns1 = {0,0,1,1};
-    int[] zeroFrontAns2 = {1,0,1,0,1};
+    int[] zeroFrontAns2 = {0,0,1,1,1};
     int[] zeroFrontAns3 = {0,1};
     int[] zeroFrontAns4 = {0,0,1,1,1};
 
@@ -102,7 +102,7 @@ public class UtilityTest{
      * @author N. Wan
      */
     void testSignature4() throws IOException {
-        assertEquals("accompany", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt"))));
+        assertEquals("accompany", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt")));
     }
     
 

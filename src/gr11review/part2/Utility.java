@@ -221,9 +221,11 @@ public class Utility {
      * @return boolean vlaue on if the string xs are balanced 
      */
     public static boolean xyBalance(String str){
+        // intializing variables
         int Lengthstyll = str.length();
         boolean YTrue = false;
 
+        // for loop to check contents
         for (int i = 0; i < Lengthstyll; i++){
             char chrletter = str.charAt(i);
             if (chrletter == 'y'){
@@ -236,6 +238,7 @@ public class Utility {
             }
         }
 
+        // return statements based on outcomes
         if (!YTrue){
             return true;
         }else{
@@ -252,17 +255,21 @@ public class Utility {
      * @throws FileNotFoundException
      */
     public static String longestWord(String filenametxt) throws FileNotFoundException{
+        // initializing variables 
         String strlongest = "";
         String strCurrent;
 
+        // scanner to read file (buffered reader sucks)
         Scanner sc = new Scanner(new File(filenametxt));
 
+        // while loop to find longest word
         while (sc.hasNext()) {
             strCurrent = sc.next();
              if (strCurrent.length() > strlongest.length()) {
                 strlongest = strCurrent;
              }
     }
+    // return longst word 
     return strlongest;    
 }
 
@@ -275,9 +282,11 @@ public class Utility {
  */
 public static int[] withoutTen(int[] nums){
 
+    // initilize variables
     int[] newarr = new int[nums.length];
     int x = 0;
 
+    // for loop to operate on array 
     for (int i = 0; i < nums.length; i++){
         if (nums[i] != 10){
             newarr[i - x] = nums[i];
@@ -285,6 +294,7 @@ public static int[] withoutTen(int[] nums){
             x++;
         }
     }
+    // return new array 
     return newarr;
 }
 
@@ -296,20 +306,24 @@ public static int[] withoutTen(int[] nums){
  * @return boolean on wether there is a point where the array can equally be split to weigh the same on both sides 
  */
 public static boolean canBalance(int[] nums){
+    // initilize variables
     int sum = 0;
     int half = 0;
     int splitsum = 0;
     int i=0;
 
 
+    // if satement to kill odd numbers 
     if (nums.length == 0){
         return false;
     }
 
+    // operation to find sum of array contents
     for (int x = 0; x < nums.length; x++){
         sum = sum + nums[x];
     }
 
+    // system to check if array can be balanced
     if (sum%2 ==0){
       half = sum / 2;
         while(splitsum != half){
@@ -323,6 +337,7 @@ public static boolean canBalance(int[] nums){
         return false;
     }
 
+    // return statements 
     if (splitsum == half){
       return true;
     }else{
@@ -339,10 +354,12 @@ public static boolean canBalance(int[] nums){
  */
 public static int[][] reverse(int[][] arr){
 
+    // initializing variables
     int[][] newarr = new int[arr.length][arr[arr.length - 1].length];
           int y = 0;
           int w = 0;
           
+          // for loops to operate on the arrays 
           for (int i = arr.length - 1; i >= 0; i--){
             for (int x = arr[arr.length - 1].length - 1; x >= 0; x--){
                 newarr[y][w] = arr[i][x];
@@ -352,6 +369,7 @@ public static int[][] reverse(int[][] arr){
             y++;
           }
 
+          // returns the array 
           return newarr;
 }
 

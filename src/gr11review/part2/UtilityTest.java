@@ -102,8 +102,9 @@ public class UtilityTest{
      * @author N. Wan
      */
     void testSignature4() throws IOException {
-        assertEquals("accompany", Utility.alphaWord("C:\\Users\\nw556\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\test2\\Review2_3Test_1.txt"));
+        assertEquals("accompany", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt"))));
     }
+    
 
     @Test
     /**
@@ -111,7 +112,7 @@ public class UtilityTest{
      * @author N. Wan
      */
     void testSignature5() throws IOException {
-        assertEquals("x", Utility.alphaWord("C:\\Users\\nw556\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\test2\\Review2_3Test_2.txt"));
+        assertEquals("x", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt")));
     }
 
     @Test
@@ -120,7 +121,7 @@ public class UtilityTest{
      * @author N. Wan
      */
     void testSignature6() throws IOException {
-        assertEquals("accompanyx", Utility.alphaWord("C:\\Users\\nw556\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\test2\\Review2_3Test_3.txt"));
+        assertEquals("accompanyx", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt")));
     }
 
     @Test
@@ -129,7 +130,7 @@ public class UtilityTest{
      * @author N. Wan
      */
     void testSignature7() throws IOException {
-        assertEquals("accompany", Utility.alphaWord("C:\\Users\\nw556\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\test2\\Review2_3Test_4.txt"));
+        assertEquals("accompany", Utility.alphaWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_1.txt")));
     } 
 
     @Test
@@ -419,7 +420,7 @@ public class UtilityTest{
      * @author J. Yogarajah
      */
     void longestwordTes3() throws IOException{
-        assertEquals("conservation", Utility.longestWord("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_3.txt"));
+        assertEquals("conservation", Utility.longestWord(("C:\\Users\\Jenus\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-wutang\\src\\gr11review\\part2\\Review2_3Test_3.txt")));
     }
     @Test
     /**

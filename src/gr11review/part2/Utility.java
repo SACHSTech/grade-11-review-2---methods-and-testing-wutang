@@ -1,4 +1,10 @@
 package gr11review.part2;
+
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import java.io.*;
 import java.util.*;
 
@@ -11,6 +17,7 @@ public class Utility {
 
 
     /** A method that checks if "xyz" is in the middle of the string.
+    * @author N. Wan
     * @param str The string that is going to be checked if there is "xyz" in the middle.
     * @return boolean If "xyz" is in the middle or not. 
     */
@@ -26,7 +33,7 @@ public class Utility {
         if (intLength >= 5) {
 
             intSides = intLength - 3;
-    
+            
             // Check if it is even or odd then check if "xyz" is in the middle.
             if (intSides % 2 != 0) {
                 
@@ -70,6 +77,7 @@ public class Utility {
 
 
     /** A method that finds the alphabetically first word and returns it. 
+    * @author N. Wan
     * @param filenametxt The file that contains all the information needed.
     * @return highestWord The word that is most alphabetically first.
     * @IOExecption 
@@ -206,4 +214,149 @@ public class Utility {
         return ans;
         
     }
+}
+
+
+/**
+     * method to check if a string contains characters ys that balance character xs
+     * @author J. Yogarajah
+     * @param str inputs a string that contains letters 
+     * @return boolean vlaue on if the string xs are balanced 
+     */
+    public static boolean xyBalance(String str){
+        int Lengthstyll = str.length();
+        boolean YTrue = false;
+
+        for (int i = 0; i < Lengthstyll; i++){
+            char chrletter = str.charAt(i);
+            if (chrletter == 'y'){
+                YTrue = true;
+            }
+            if (YTrue){
+                if (chrletter == 'x'){
+                    YTrue = false;
+                }
+            }
+        }
+
+        if (!YTrue){
+            return true;
+        }else{
+            return false;
+        }
+
+
+    /**
+     * method to return the longest word in a txt file
+     * @author J. Yogarajah
+     * @param filenametxt enters files from the same directory
+     * @return longest string in the file 
+     * @throws FileNotFoundException
+     */
+    public static String longestWord(String filenametxt) throws FileNotFoundException{
+        String strlongest = "";
+        String strCurrent;
+
+        Scanner sc = new Scanner(new File(filenametxt));
+
+        while (sc.hasNext()) {
+            strCurrent = sc.next();
+             if (strCurrent.length() > strlongest.length()) {
+                strlongest = strCurrent;
+             }
+    }
+    return strlongest;    
+}
+
+
+/**
+ * method that enters an array and returns one which contains no 10s, and instead 0s at the end
+ * @author J. Yogarajah
+ * @param nums enters an array of numbers to be operated on 
+ * @return the same except without the 10s found inside 
+ */
+public static int[] withoutTen(int[] nums){
+
+    int[] newarr = new int[nums.length];
+    int x = 0;
+
+    for (int i = 0; i < nums.length; i++){
+        if (nums[i] != 10){
+            newarr[i - x] = nums[i];
+        }else{
+            x++;
+        }
+    }
+    return newarr;
+}
+
+
+/**
+ * method to determine wether there is a point where the array can equally be split to weigh the same on both sides 
+ * @author J. Yogarajah
+ * @param nums array input of numbers
+ * @return boolean on wether there is a point where the array can equally be split to weigh the same on both sides 
+ */
+public static boolean canBalance(int[] nums){
+    int sum = 0;
+    int half = 0;
+    int splitsum = 0;
+    int i=0;
+
+
+    if (nums.length == 0){
+        return false;
+    }
+
+    for (int x = 0; x < nums.length; x++){
+        sum = sum + nums[x];
+    }
+
+    if (sum%2 ==0){
+      half = sum / 2;
+        while(splitsum != half){
+            splitsum = splitsum + nums[i];
+            i++;
+          if (i == nums.length){
+            break;
+          }
+        }
+    }else{
+        return false;
+    }
+
+    if (splitsum == half){
+      return true;
+    }else{
+      return false;
+    }
+}
+
+
+/**
+ * method to reverse a 2d array 
+ * @author J. Yogarajah
+ * @param arr inputs a 2d array off numbers
+ * @return 2d arrray of the original array reversed 
+ */
+public static int[][] reverse(int[][] arr){
+
+    int[][] newarr = new int[arr.length][arr[arr.length - 1].length];
+          int y = 0;
+          int w = 0;
+          
+          for (int i = arr.length - 1; i >= 0; i--){
+            for (int x = arr[arr.length - 1].length - 1; x >= 0; x--){
+                newarr[y][w] = arr[i][x];
+                w++;
+            }
+            w = 0;
+            y++;
+          }
+
+          return newarr;
+}
+
+
+
 }

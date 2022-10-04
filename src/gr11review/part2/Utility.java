@@ -1,10 +1,8 @@
 package gr11review.part2;
-
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import java.io.*;
 import java.util.*;
 
@@ -214,7 +212,6 @@ public class Utility {
         return ans;
         
     }
-}
 
 
 /**
@@ -244,6 +241,7 @@ public class Utility {
         }else{
             return false;
         }
+    }
 
 
     /**

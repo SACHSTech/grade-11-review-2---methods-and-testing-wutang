@@ -9,9 +9,10 @@ import java.util.*;
 */
 public class Utility {
 
-    /** Creates an employee with the specified name.
-    * @param lastName The employee’s last name.
-    * @return boolean The 
+
+    /** A method that checks if "xyz" is in the middle of the string.
+    * @param str The string that is going to be checked if there is "xyz" in the middle.
+    * @return boolean If "xyz" is in the middle or not. 
     */
     public static boolean xyzMiddle(String str){ 
 
@@ -67,6 +68,7 @@ public class Utility {
 
     }
 
+
     /** A method that finds the alphabetically first word and returns it. 
     * @param filenametxt The file that contains all the information needed.
     * @return highestWord The word that is most alphabetically first.
@@ -95,8 +97,9 @@ public class Utility {
 
     // Return the alphabetically first word. 
     return highestWord;
-
+    
     }
+
 
     /** A method that puts all the zeros in an array to the front. 
     * @param nums The array that has the zeros in random position.
@@ -140,6 +143,7 @@ public class Utility {
         return zeroFront;   
     }
 
+
     /** A method that creates an array with an ascending pattern. 
     * @param n The highest number.
     * @return seriesUp An array with an ascending pattern.
@@ -177,6 +181,7 @@ public class Utility {
 
     }
 
+
     /** A method that takes a portion of a 2D array and outputs it based on the rows and columns given. 
     * @param arr The original 2D array. 
     * @param row The row the portion goes up to.
@@ -199,5 +204,6 @@ public class Utility {
 
         // Return array. 
         return ans;
+        
     }
 }

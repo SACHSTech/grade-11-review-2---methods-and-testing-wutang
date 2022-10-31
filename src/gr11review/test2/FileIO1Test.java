@@ -1,9 +1,6 @@
 package gr11review.test2;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
-
 import gr11review.part2.Utility;
 import java.io.*;
 
@@ -26,7 +23,6 @@ public class FileIO1Test {
     @Test
     void testMiddle()throws IOException{
         assertEquals("conservation", Utility.longestWord(absPath+"Review2_3Test_1.txt"));
-
     }
 
     /**

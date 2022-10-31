@@ -8,6 +8,7 @@ import java.util.*;
 
 /**
  * description: a code to run methods to pass tests
+ * author: @Jenusan, @nathanwan
  */
 
 /**
